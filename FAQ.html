@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faq JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+</head>
+<body>
+
+  <div class="sec-faq">
+  <div class="container">
+    <h1 class="title">
+      Frequenty Asked Questions
+    </h1>
+    <hr
+      style="border: blue; background-color: blue; height: 4px; width: 40%; margin-left: auto; margin-right: auto; margin-top: 10px;">
+    <main class="accordion">
+      <div class="faq-img">
+        <img src="./images/flat-questions-concept-illustration_52683-64276.avif" alt="" class="accordion-img">
+      </div>
+      <div class="content-accordion">
+        <div class="question-answer"  data-aos="fade-left">
+          <div class="question">
+            <h3 class="title-question">
+              Is AxessEQ compatible with Android or iOS?
+            </h3>
+            <button class="question-btn">
+              <span class="up-icon">
+                <i class="fas fa-chevron-up"></i>
+              </span>
+              <span class="down-icon">
+                <i class="fas fa-chevron-down"></i>
+              </span>
+            </button>
+          </div>
+          <div class="answer">
+            <p>AxessEQ is currently in the development stage and will be compatible and available for Android and iOS
+              devices once pushed to live.</p>
+          </div>
+        </div>
+        <div class="question-answer" data-aos-duration="700" data-aos="fade-left">
+          <div class="question">
+            <h3 class="title-question">
+              Will AxessEQ be available in my state?
+            </h3>
+            <button class="question-btn">
+              <span class="up-icon">
+                <i class="fas fa-chevron-up"></i>
+              </span>
+              <span class="down-icon">
+                <i class="fas fa-chevron-down"></i>
+              </span>
+            </button>
+          </div>
+          <div class="answer">
+            <p>AxessEQ will be inaugurated as a platform throughout the United States.</p>
+          </div>
+        </div>
+        <div class="question-answer" data-aos-duration="800" data-aos="fade-left">
+          <div class="question">
+            <h3 class="title-question">
+              How do I register for information alerts?
+            </h3>
+            <button class="question-btn">
+              <span class="up-icon">
+                <i class="fas fa-chevron-up"></i>
+              </span>
+              <span class="down-icon">
+                <i class="fas fa-chevron-down"></i>
+              </span>
+            </button>
+          </div>
+          <div class="answer">
+            <p>Click on the pre-registration button and input your details.</p>
+          </div>
+        </div>
+
+
+        <div class="question-answer" data-aos-duration="900" data-aos="fade-left">
+          <div class="question">
+            <h3 class="title-question">
+              What is Gold Axess Subscription in AxessEQ?
+            </h3>
+            <button class="question-btn">
+              <span class="up-icon">
+                <i class="fas fa-chevron-up"></i>
+              </span>
+              <span class="down-icon">
+                <i class="fas fa-chevron-down"></i>
+              </span>
+            </button>
+          </div>
+          <div class="answer">
+            <p>Gold Axess is a subscription plan for AxessEQ users. Now you can access more features in AxessEQ App
+              with the Gold Axess Subscription. </p>
+          </div>
+        </div>
+
+        <div class="question-answer"  data-aos-duration="1000" data-aos="fade-left">
+          <div class="question">
+            <h3 class="title-question">
+              Does AxessEQ allow you to cancel a subscription?
+            </h3>
+            <button class="question-btn">
+              <span class="up-icon">
+                <i class="fas fa-chevron-up"></i>
+              </span>
+              <span class="down-icon">
+                <i class="fas fa-chevron-down"></i>
+              </span>
+            </button>
+          </div>
+          <div class="answer">
+            <p>Yes, AxessEQ allows you to cancel a subscription at anytime from a mobile app if you are no longer
+              interested in continuing with Gold Axess.</p>
+          </div>
+        </div>
+        <div class="question-answer" data-aos-duration="1100" data-aos="fade-left">
+          <div class="question">
+            <h3 class="title-question">
+              Does AxessEQ provide any refund policy against subscription?
+            </h3>
+            <button class="question-btn">
+              <span class="up-icon">
+                <i class="fas fa-chevron-up"></i>
+              </span>
+              <span class="down-icon">
+                <i class="fas fa-chevron-down"></i>
+              </span>
+            </button>
+          </div>
+          <div class="answer">
+            <p>No, AxessEQ doesn't have a refund policy against subscription.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+  <script>
+    const questions = document.querySelectorAll('.question-answer');
+
+    questions.forEach(function (question) {
+      const btn = question.querySelector('.question-btn');
+      btn.addEventListener("click", function () {
+        questions.forEach(function (item) {
+          if (item !== question) {
+            item.classList.remove("show-text");
+          }
+        })
+        question.classList.toggle("show-text");
+      })
+    })
+
+  </script>
+</body>
+</html>
